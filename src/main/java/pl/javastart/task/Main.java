@@ -7,6 +7,5 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         CoordinateSystem coordinateSystem = new CoordinateSystem();
         coordinateSystem.run(scanner);
-        coordinateSystem.compareCoordinate();
     }
 }
