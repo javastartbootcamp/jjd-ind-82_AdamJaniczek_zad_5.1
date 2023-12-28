@@ -1,7 +1,5 @@
 package pl.javastart.task;
 
-import java.util.Scanner;
-
 public class Point {
     private int coordinateX;
     private int coordinateY;
