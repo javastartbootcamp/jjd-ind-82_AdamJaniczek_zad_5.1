@@ -6,10 +6,10 @@ public class CoordinateSystem {
     private Point point = new Point();
 
     public void run(Scanner scanner) {
-        System.out.println("Podaj X");
-        point.setCoordinateX(scanner.nextInt());
         System.out.println("Podaj Y");
         point.setCoordinateY(scanner.nextInt());
+        System.out.println("Podaj X");
+        point.setCoordinateX(scanner.nextInt());
     }
 
     void compareCoordinate() {
