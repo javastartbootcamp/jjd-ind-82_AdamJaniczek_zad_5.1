@@ -3,9 +3,34 @@ package pl.javastart.task;
 import java.util.Scanner;
 
 public class CoordinateSystem {
+    private Point point = new Point();
 
-    // uzupełnij metodę. Używaj scannera przekazanego w parametrze.
-    void run(Scanner scanner) {
-        System.out.println("Punkt (5, -3)");
+    public void run(Scanner scanner) {
+        System.out.print("Podaj współrzędną x: ");
+        point.setCoordinateX(scanner.nextInt());
+        System.out.print("\nPodaj współrzędną y: ");
+        point.setCoordinateY(scanner.nextInt());
+    }
+
+    void compareCoordinate() {
+        int x = point.getCoordinateX();
+        int y = point.getCoordinateY();
+        if (x == 0 && y == 0) {
+            System.out.printf("Punkt (%d, %d) leży na środku układu współrzędnych", x, y);
+        } else if (x == 0) {
+            System.out.printf("Punkt (%d, %d) leży na osi Y", x, y);
+        } else if (y == 0) {
+            System.out.printf("Punkt (%d, %d) leży na osi X", x, y);
+        } else if (y > 0) {
+            if (x > 0) {
+                System.out.printf("Punkt (%d, %d) leży w I ćwiartce układu współrzędnych", x, y);
+            } else {
+                System.out.printf("Punkt (%d, %d) leży w II ćwiartce układu współrzędnych", x, y);
+            }
+        } else if (x < 0) {
+            System.out.printf("Punkt (%d, %d) leży w III ćwiartce układu współrzędnych", x, y);
+        } else {
+            System.out.printf("Punkt (%d, %d) leży w IV ćwiartce układu współrzędnych", x, y);
+        }
     }
 }
