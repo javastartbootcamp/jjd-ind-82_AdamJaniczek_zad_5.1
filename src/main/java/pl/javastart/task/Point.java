@@ -4,31 +4,36 @@ public class Point {
     private int coordinateX;
     private int coordinateY;
 
-    public int getCoordinateX() {
+    public int coordinateX() {
         return coordinateX;
+    }
+
+    public int coordinateY() {
+        return coordinateY;
     }
 
     public void setCoordinateX(int coordinateX) {
         this.coordinateX = coordinateX;
     }
 
-    public int getCoordinateY() {
-        return coordinateY;
-    }
-
     public void setCoordinateY(int coordinateY) {
         this.coordinateY = coordinateY;
     }
 
-    void print(Point point) {
-        System.out.printf("Punkt (%d, %d) ", getCoordinateX(), getCoordinateY());
+    String point() {
+        String point = String.format("Punkt (%d, %d)", coordinateX(), coordinateY());
+        return point;
     }
 
-    void print(Point point, String quarter) {
-        System.out.printf("Punkt (%d, %d) leży w %s ćwiartce układu współrzędnych.", getCoordinateX(), getCoordinateY(), quarter);
+    void pointInTheMiddle() {
+        System.out.printf("%s leży na środku układu współrzędnych", point());
     }
 
-    void print(String differentMessage) {
-        System.out.printf("Punkt (%d, %d) leży na %s", getCoordinateX(), getCoordinateY(), differentMessage);
+    void pointOnTheXorYaxis(String axis) {
+        System.out.printf("%s leży na osi %s", point(), axis);
+    }
+
+    void pointOnTheQuadrant(String quadrant) {
+        System.out.printf("%s leży w %s ćwiartce układu współrzędnych", point(), quadrant);
     }
 }

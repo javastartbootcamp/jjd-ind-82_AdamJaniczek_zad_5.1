@@ -14,24 +14,24 @@ public class CoordinateSystem {
     }
 
     void compareCoordinate() {
-        int x = point.getCoordinateX();
-        int y = point.getCoordinateY();
+        int x = point.coordinateX();
+        int y = point.coordinateY();
         if (x == 0 && y == 0) {
-            point.print("środku układu współrzędnych.");
+            point.pointInTheMiddle();
         } else if (x == 0) {
-            point.print("osi Y.");
+            point.pointOnTheXorYaxis("Y");
         } else if (y == 0) {
-            point.print("osi X.");
+            point.pointOnTheXorYaxis("X");
         } else if (y > 0) {
             if (x > 0) {
-                point.print(point, "I");
+                point.pointOnTheQuadrant("I");
             } else {
-                point.print(point, "II");
+                point.pointOnTheQuadrant("II");
             }
         } else if (x < 0) {
-            point.print(point, "III");
+            point.pointOnTheQuadrant("III");
         } else {
-            point.print(point, "IV");
+            point.pointOnTheQuadrant("IV");
         }
     }
 }
