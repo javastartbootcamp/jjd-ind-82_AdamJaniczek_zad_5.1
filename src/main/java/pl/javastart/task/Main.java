@@ -4,9 +4,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        CoordinateSystem coordinateSystem = new CoordinateSystem();
         Scanner scanner = new Scanner(System.in);
+        CoordinateSystem coordinateSystem = new CoordinateSystem();
         coordinateSystem.run(scanner);
     }
-
 }
